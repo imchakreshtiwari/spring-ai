@@ -10,15 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class OllamaChatController {
 
-    private final ChatClient chatClient;
+//    private final ChatClient chatClient;
+//
+//    public OllamaChatController(ChatClient.Builder chatClientBuilder) {
+//        this.chatClient = chatClientBuilder.build();
+//    }
+//
+//
+//    @GetMapping("/chat/ollama" )
+//    public String chat(@RequestParam("prompt") String prompt) {
+//        return chatClient.prompt(prompt).call().content();
+//    }
 
-    public OllamaChatController(ChatClient.Builder chatClientBuilder) {
-        this.chatClient = chatClientBuilder.build();
-    }
-
-
-    @GetMapping("/chat/ollama" )
-    public String chat(@RequestParam("prompt") String prompt) {
-        return chatClient.prompt(prompt).call().content();
-    }
 }

@@ -11,16 +11,16 @@ import reactor.core.publisher.Flux;
 @RestController
 public class StructuredOutputController {
 
-    private final ChatClient chatClient;
-
-    public StructuredOutputController(ChatClient.Builder chatClientBuilder) {
-        this.chatClient = chatClientBuilder.build();
-    }
-
-
-    @GetMapping("/res")
-    public ResponseEntity<CountryCity> stream(@RequestParam("prompt") String prompt) {
-        CountryCity countryCity = chatClient.prompt(prompt).call().entity(CountryCity.class);
-        return ResponseEntity.ok(countryCity);
-    }
+//    private final ChatClient chatClient;
+//
+//    public StructuredOutputController(ChatClient.Builder chatClientBuilder) {
+//        this.chatClient = chatClientBuilder.build();
+//    }
+//
+//
+//    @GetMapping("/res")
+//    public ResponseEntity<CountryCity> stream(@RequestParam("prompt") String prompt) {
+//        CountryCity countryCity = chatClient.prompt(prompt).call().entity(CountryCity.class);
+//        return ResponseEntity.ok(countryCity);
+//    }
 }
